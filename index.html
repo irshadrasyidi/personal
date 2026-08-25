@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World!</title>
+  <meta name="description" content="Personal website of Irshad Rasyidi — Data Engineer by day, EDM Producer by night. Jakarta, Indonesia.">
+  <meta property="og:title" content="Irshad Rasyidi — Data Engineer & EDM Producer">
+  <meta property="og:description" content="Data Engineer by day, EDM Producer by night.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irshadrasyidi.github.io/personal/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            day: { accent: '#2563eb', bg: '#f8fafc', card: '#ffffff', text: '#1e293b' },
+            night: { accent: '#8b5cf6', bg: '#0f172a', card: '#1e293b', text: '#f1f5f9' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-body bg-day-bg dark:bg-night-bg text-day-text dark:text-night-text min-h-screen">
+
+  <!-- HERO -->
+  <header class="pt-16 pb-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Profile Image Placeholder -->
+      <div class="w-28 h-28 mx-auto mb-6 rounded-full border-4 border-day-accent dark:border-night-accent overflow-hidden">
+        <img src="assets/images/linkedin_pp_2024.jpg" alt="Irshad Rasyidi" class="w-full h-full object-cover dark:hidden">
+        <img src="assets/images/spotify_pp.jpg" alt="Irshad Rasyidi" class="w-full h-360 object-cover hidden dark:block">
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight mb-3">
+        Irshad Mohammad Rasyidi
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-500 dark:text-slate-400 mb-4 font-medium">
+        <span id="role-text"></span><span id="role-cursor" class="typing-cursor">|</span>
+      </p>
+
+      <p class="max-w-xl mx-auto text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+        Fueled by a passion for transforming complex data into actionable insights, he works as a Data Engineer and BI enthusiast dedicated to scalable systems.
+      </p>
+
+      <p class="max-w-xl mx-auto text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+        Off the clock, his analytical creativity is channeled into producing energetic EDM tracks and playing video games.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-2 text-sm text-slate-500 dark:text-slate-400 dark:hidden">
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">SQL</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Fabric</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Python</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Power BI</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">ETL</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">GCP</span>
+      </div>
+      <div class="hidden dark:flex flex-wrap justify-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">FL Studio</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Bass Guitar</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">CS2</span>
+        <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">MLBB</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MODE INDICATOR -->
+  <div class="max-w-4xl mx-auto px-6 mb-10">
+    <div class="flex items-center justify-center gap-4">
+      <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Tech</span>
+      <button
+        id="theme-toggle"
+        type="button"
+        role="switch"
+        aria-checked="false"
+        aria-label="Toggle dark mode"
+        class="toggle-track relative inline-flex shrink-0 cursor-pointer rounded-full border-2 border-slate-300 dark:border-slate-600 bg-slate-200 dark:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-day-accent dark:focus:ring-night-accent focus:ring-offset-2 dark:focus:ring-offset-night-bg"
+      >
+        <span class="sr-only">Toggle dark mode</span>
+        <span class="toggle-thumb pointer-events-none inline-block rounded-full bg-white dark:bg-slate-900 shadow-lg transform transition-transform duration-200 ease-in-out"></span>
+      </button>
+      <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Hobby</span>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-6">
+
+    <!-- TECH PROJECTS (Light Mode) -->
+    <section class="tech-section space-y-6 mb-16">
+      <h2 class="font-display text-2xl font-bold mb-6">Tech Projects</h2>
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <!-- CryptoGraphETL -->
+        <a href="https://github.com/irshadrasyidi/CryptoGraphETL" target="_blank" rel="noopener noreferrer"
+           class="group block p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-display font-bold text-lg group-hover:text-day-accent dark:group-hover:text-night-accent">CryptoGraphETL</h3>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-day-accent dark:group-hover:text-night-accent shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">
+            Data & analytical project to analyze correlation between cryptocurrency prices and GPU price fluctuations using GCP, BigQuery, and Looker Studio.
+          </p>
+          <span class="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400">Python</span>
+        </a>
+
+        <!-- LeafClassificationKeras -->
+        <a href="https://github.com/irshadrasyidi/LeafClassificationKeras" target="_blank" rel="noopener noreferrer"
+           class="group block p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-display font-bold text-lg group-hover:text-day-accent dark:group-hover:text-night-accent">LeafClassificationKeras</h3>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-day-accent dark:group-hover:text-night-accent shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">
+            Classification of 10 classes of leaves using deep learning — a computer vision final project built with Keras.
+          </p>
+          <span class="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400">Python</span>
+        </a>
+
+        <!-- flash -->
+        <a href="https://github.com/irshadrasyidi/flash" target="_blank" rel="noopener noreferrer"
+           class="group block p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-display font-bold text-lg group-hover:text-day-accent dark:group-hover:text-night-accent">flash</h3>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-day-accent dark:group-hover:text-night-accent shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">
+            Aplikasi Menghafalkan Kosakata Bahasa Asing — a flashcard app for memorizing foreign vocabulary.
+          </p>
+          <span class="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400">PHP</span>
+        </a>
+
+        <!-- SimpleSharedWallet -->
+        <a href="https://github.com/irshadrasyidi/SimpleSharedWallet" target="_blank" rel="noopener noreferrer"
+           class="group block p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-display font-bold text-lg group-hover:text-day-accent dark:group-hover:text-night-accent">SimpleSharedWallet</h3>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-day-accent dark:group-hover:text-night-accent shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">
+            A simple shared wallet smart contract built on Ethereum using Solidity.
+          </p>
+          <span class="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Solidity</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- MUSIC PROJECTS (Dark Mode) -->
+    <section class="music-section space-y-8 mb-16">
+      <h2 class="font-display text-2xl font-bold mb-6">Music Projects</h2>
+
+      <!-- <p class="text-slate-400 leading-relaxed max-w-2xl">
+        When the laptop closes and the DAW opens, I become an EDM producer. Here's some of my work — tracks available on Spotify and SoundCloud.
+      </p> -->
+
+      <!-- Spotify Embed -->
+      <div class="rounded-xl overflow-hidden border border-slate-700">
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/0DSSfbafynjk8YqOpO7wsO?utm_source=generator&theme=0"
+          width="100%"
+          height="152"
+          frameBorder="0"
+          allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Irshad Rasyidi on Spotify"
+        ></iframe>
+      </div>
+
+      <!-- SoundCloud Embed -->
+      <div class="rounded-xl overflow-hidden border border-slate-700">
+        <iframe
+          width="100%"
+          height="166"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/irshadrasyidi&color=%238b5cf6&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+          title="Irshad Rasyidi on SoundCloud"
+        ></iframe>
+      </div>
+
+      <!-- Listen On Links -->
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a href="https://open.spotify.com/artist/0DSSfbafynjk8YqOpO7wsO" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#1DB954] hover:bg-[#1ed760] text-white font-medium text-sm transition-colors">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          Listen on Spotify
+        </a>
+        <a href="https://soundcloud.com/irshadrasyidi" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#FF5500] hover:bg-[#ff7733] text-white font-medium text-sm transition-colors">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.172 1.308c.013.06.045.094.09.094.047 0 .08-.035.09-.094l.21-1.308-.21-1.334c-.01-.055-.043-.09-.09-.09m1.83-1.229c-.063 0-.109.048-.116.109l-.217 2.553.217 2.494c.007.06.053.109.116.109.064 0 .109-.048.118-.109l.246-2.494-.246-2.553c-.009-.06-.054-.109-.118-.109m.945-.089c-.07 0-.115.052-.123.115l-.201 2.642.201 2.59c.008.063.053.115.123.115.068 0 .113-.052.121-.115l.23-2.59-.23-2.642c-.008-.063-.053-.115-.121-.115m.956-.178c-.077 0-.125.058-.131.125l-.184 2.82.184 2.761c.006.07.054.126.131.126.075 0 .123-.056.13-.126l.21-2.761-.21-2.82c-.007-.067-.055-.125-.13-.125m.967-.173c-.084 0-.134.064-.14.135l-.169 2.993.169 2.929c.006.075.056.136.14.136.082 0 .132-.06.139-.136l.19-2.929-.19-2.993c-.007-.07-.057-.135-.139-.135m1.018-.086c-.09 0-.142.068-.148.144l-.153 3.079.153 3.006c.006.082.058.146.148.146.09 0 .14-.064.148-.146l.172-3.006-.172-3.079c-.008-.076-.058-.144-.148-.144m1.021-.168c-.098 0-.15.074-.156.155l-.137 3.247.137 3.164c.006.088.058.157.156.157.096 0 .148-.069.155-.157l.155-3.164-.155-3.247c-.007-.081-.059-.155-.155-.155m1.044-.163c-.105 0-.16.08-.165.167l-.121 3.41.121 3.314c.005.093.06.168.165.168.103 0 .158-.075.164-.168l.138-3.314-.138-3.41c-.006-.087-.061-.167-.164-.167m1.036-.08c-.111 0-.168.086-.173.178l-.106 3.49.106 3.386c.005.098.062.178.173.178.109 0 .166-.08.172-.178l.12-3.386-.12-3.49c-.006-.092-.063-.178-.172-.178m1.06-.158c-.118 0-.176.092-.181.189l-.09 3.648.09 3.53c.005.103.063.19.181.19.117 0 .175-.087.18-.19l.102-3.53-.102-3.648c-.005-.097-.063-.189-.18-.189m1.065-.074c-.124 0-.184.098-.189.2l-.075 3.722.075 3.589c.005.108.065.2.189.2.123 0 .183-.092.188-.2l.084-3.589-.084-3.722c-.005-.102-.065-.2-.188-.2m1.088-.15c-.13 0-.192.104-.197.212l-.059 3.872.059 3.683c.005.113.067.212.197.212.13 0 .191-.099.197-.212l.066-3.683-.066-3.872c-.006-.108-.067-.212-.197-.212m2.175.13c-.029-.12-.069-.24-.112-.354-.057-.15-.12-.297-.194-.437a2.73 2.73 0 00-.387-.522c-.045-.048-.092-.093-.142-.136-.146-.125-.312-.226-.49-.3-.088-.038-.18-.068-.273-.093-.054-.015-.11-.027-.166-.037-.054-.01-.11-.017-.165-.022-.055-.005-.11-.007-.165-.007h-3.648c-.096 0-.188.037-.256.105-.067.067-.105.158-.105.255v5.11c0 .193.157.35.35.35h4.596c.547 0 1.05-.26 1.365-.695.314-.434.464-.984.41-1.527-.055-.543-.337-1.032-.78-1.365z"/></svg>
+          Listen on SoundCloud
+        </a>
+      </div>
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl font-bold mb-6">Connect</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+        <!-- LinkedIn -->
+        <a href="https://id.linkedin.com/in/irshad-rasyidi" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col items-center gap-2 p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <svg class="w-7 h-7 text-slate-600 dark:text-slate-300 group-hover:text-day-accent dark:group-hover:text-night-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span class="text-sm font-medium">LinkedIn</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/irshadrasyidi" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col items-center gap-2 p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <svg class="w-7 h-7 text-slate-600 dark:text-slate-300 group-hover:text-day-accent dark:group-hover:text-night-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span class="text-sm font-medium">GitHub</span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/irshadrasyidi" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col items-center gap-2 p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <svg class="w-7 h-7 text-slate-600 dark:text-slate-300 group-hover:text-day-accent dark:group-hover:text-night-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <span class="text-sm font-medium">Instagram</span>
+        </a>
+
+        <!-- SoundCloud -->
+        <a href="https://soundcloud.com/irshad-rasyidi" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col items-center gap-2 p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <svg class="w-7 h-7 text-slate-600 dark:text-slate-300 group-hover:text-day-accent dark:group-hover:text-night-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.172 1.308c.013.06.045.094.09.094.047 0 .08-.035.09-.094l.21-1.308-.21-1.334c-.01-.055-.043-.09-.09-.09m1.83-1.229c-.063 0-.109.048-.116.109l-.217 2.553.217 2.494c.007.06.053.109.116.109.064 0 .109-.048.118-.109l.246-2.494-.246-2.553c-.009-.06-.054-.109-.118-.109m.945-.089c-.07 0-.115.052-.123.115l-.201 2.642.201 2.59c.008.063.053.115.123.115.068 0 .113-.052.121-.115l.23-2.59-.23-2.642c-.008-.063-.053-.115-.121-.115m.956-.178c-.077 0-.125.058-.131.125l-.184 2.82.184 2.761c.006.07.054.126.131.126.075 0 .123-.056.13-.126l.21-2.761-.21-2.82c-.007-.067-.055-.125-.13-.125m.967-.173c-.084 0-.134.064-.14.135l-.169 2.993.169 2.929c.006.075.056.136.14.136.082 0 .132-.06.139-.136l.19-2.929-.19-2.993c-.007-.07-.057-.135-.139-.135m1.018-.086c-.09 0-.142.068-.148.144l-.153 3.079.153 3.006c.006.082.058.146.148.146.09 0 .14-.064.148-.146l.172-3.006-.172-3.079c-.008-.076-.058-.144-.148-.144m1.021-.168c-.098 0-.15.074-.156.155l-.137 3.247.137 3.164c.006.088.058.157.156.157.096 0 .148-.069.155-.157l.155-3.164-.155-3.247c-.007-.081-.059-.155-.155-.155m1.044-.163c-.105 0-.16.08-.165.167l-.121 3.41.121 3.314c.005.093.06.168.165.168.103 0 .158-.075.164-.168l.138-3.314-.138-3.41c-.006-.087-.061-.167-.164-.167m1.036-.08c-.111 0-.168.086-.173.178l-.106 3.49.106 3.386c.005.098.062.178.173.178.109 0 .166-.08.172-.178l.12-3.386-.12-3.49c-.006-.092-.063-.178-.172-.178m1.06-.158c-.118 0-.176.092-.181.189l-.09 3.648.09 3.53c.005.103.063.19.181.19.117 0 .175-.087.18-.19l.102-3.53-.102-3.648c-.005-.097-.063-.189-.18-.189m1.065-.074c-.124 0-.184.098-.189.2l-.075 3.722.075 3.589c.005.108.065.2.189.2.123 0 .183-.092.188-.2l.084-3.589-.084-3.722c-.005-.102-.065-.2-.188-.2m1.088-.15c-.13 0-.192.104-.197.212l-.059 3.872.059 3.683c.005.113.067.212.197.212.13 0 .191-.099.197-.212l.066-3.683-.066-3.872c-.006-.108-.067-.212-.197-.212m2.175.13c-.029-.12-.069-.24-.112-.354-.057-.15-.12-.297-.194-.437a2.73 2.73 0 00-.387-.522c-.045-.048-.092-.093-.142-.136-.146-.125-.312-.226-.49-.3-.088-.038-.18-.068-.273-.093-.054-.015-.11-.027-.166-.037-.054-.01-.11-.017-.165-.022-.055-.005-.11-.007-.165-.007h-3.648c-.096 0-.188.037-.256.105-.067.067-.105.158-.105.255v5.11c0 .193.157.35.35.35h4.596c.547 0 1.05-.26 1.365-.695.314-.434.464-.984.41-1.527-.055-.543-.337-1.032-.78-1.365z"/></svg>
+          <span class="text-sm font-medium">SoundCloud</span>
+        </a>
+
+        <!-- Steam -->
+        <a href="https://steamcommunity.com/id/didotbrodot/" target="_blank" rel="noopener noreferrer"
+           class="group flex flex-col items-center gap-2 p-5 rounded-xl bg-white dark:bg-night-card border border-slate-200 dark:border-slate-700 hover:border-day-accent dark:hover:border-night-accent hover:shadow-lg transition-all">
+          <svg class="w-7 h-7 text-slate-600 dark:text-slate-300 group-hover:text-day-accent dark:group-hover:text-night-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.732L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 12.001-5.373 12.001-12S18.606 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.751-1.121-1.378-1.384c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.49 1.013 2.445-.397.957-1.49 1.41-2.45 1.023zm8.8-9.24c0-1.663-1.353-3.016-3.016-3.016-1.661 0-3.014 1.353-3.014 3.016 0 1.665 1.353 3.018 3.014 3.018 1.663 0 3.016-1.353 3.016-3.018z"/></svg>
+          <span class="text-sm font-medium">Steam</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-700 py-8 px-6">
+    <div class="max-w-4xl mx-auto text-center text-sm text-slate-400 dark:text-slate-500">
+      <p>&copy; 2026 Irshad M Rasyidi</p>
+    </div>
+  </footer>
+
+  <!-- THEME TOGGLE SCRIPT -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+
+      function setMode(dark) {
+        if (dark) {
+          html.classList.add('dark');
+          toggle.setAttribute('aria-checked', 'true');
+        } else {
+          html.classList.remove('dark');
+          toggle.setAttribute('aria-checked', 'false');
+        }
+      }
+
+      const stored = localStorage.getItem('theme');
+      if (stored) {
+        setMode(stored === 'dark');
+      } else {
+        setMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+
+      toggle.addEventListener('click', function () {
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        setMode(isDark);
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        if (!localStorage.getItem('theme')) {
+          setMode(e.matches);
+        }
+      });
+    })();
+  </script>
+
+  <!-- TYPING EFFECT -->
+  <script>
+    (function () {
+      const roleEl = document.getElementById('role-text');
+      const roles = ['Data Engineer', 'Hobbyist EDM Producer', 'Casual Gamer'];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function tick() {
+        const current = roles[roleIndex];
+
+        if (isDeleting) {
+          charIndex--;
+        } else {
+          charIndex++;
+        }
+
+        roleEl.textContent = current.substring(0, charIndex);
+
+        let delay = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === current.length) {
+          delay = 2000;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          delay = 400;
+        }
+
+        setTimeout(tick, delay);
+      }
+
+      tick();
+    })();
+  </script>
+
+</body>
+</html>
